@@ -1,7 +1,13 @@
 <template>
-  <div>Hello, Vue!</div>
+  <div>
+    Hello, Vue!
+  </div>
 </template>
 
-<script setup></script>
+<script setup>
 
-<style lang="scss" scoped></style>
+</script>
+
+<style lang="scss" scoped>
+
+</style>
