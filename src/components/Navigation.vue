@@ -1,13 +1,15 @@
 <template>
     <nav>
-        <router-link :to="{ name: 'home' }">Home</router-link>
-        <router-link :to="{ name: 'blogPosts' }">Blog Posts</router-link>
-        <router-link :to="{ name: 'about' }">About</router-link>
+        <router-link v-for="route in navRoutes" :key="route.path" :to="route.path">
+            {{ route.meta.title }}
+        </router-link>
     </nav>
 </template>
 
 <script setup>
+import { useNavStore } from '@/stores/navStore'
 
+const { navRoutes } = useNavStore() // Get the navRoutes from the store, navRoutes is a reactive array
 </script>
 
 <style lang="scss" scoped>
